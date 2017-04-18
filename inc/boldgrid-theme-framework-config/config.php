@@ -27,11 +27,11 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	);
 
 	// Assign Locations for Generic Footer.
-		$boldgrid_framework_configs['template']['locations']['footer'] = array(
-			'1' => array( '[menu]footer_center' ),
-			'5' => array( '[widget]boldgrid-widget-3' ),
-			'8' => array( '[action]boldgrid_display_attribution_links' ),
-		);
+	$boldgrid_framework_configs['template']['locations']['footer'] = array(
+		'1' => array( '[menu]footer_center' ),
+		'5' => array( '[widget]boldgrid-widget-3' ),
+		'8' => array( '[action]boldgrid_display_attribution_links' ),
+	);
 
 	// Enable BoldGrid Color Palette System.
 	$boldgrid_framework_configs['customizer-options']['colors']['enabled'] = true;
