@@ -1,39 +1,40 @@
 <?php
 function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
-
-	// Required.
+	/**
+	 * General Configs
+	 */
 	$boldgrid_framework_configs['theme_name'] = 'boldgrid-cobalt';
-	$boldgrid_framework_configs['scripts']['boldgrid-sticky-footer'] = true;
-	$boldgrid_framework_configs['customizer-options']['typography']['enabled'] = true;
-	$boldgrid_framework_configs['temp']['attribution_links'] = true;
 	$boldgrid_framework_configs['boldgrid-parent-theme'] = true;
 	$boldgrid_framework_configs['parent-theme-name'] = 'prime';
-	$boldgrid_framework_configs['template']['footer'] = 'generic';
-	$boldgrid_framework_configs['template']['header'] = 'generic';
-	$boldgrid_framework_configs['template']['pages']['page_home.php']['entry-content'] = '';
 
-	// Background.
-	$boldgrid_framework_configs['customizer-options']['background']['defaults']['background_image'] = true;
+	// Enable sticky footer and attribution links.
+	$boldgrid_framework_configs['scripts']['boldgrid-sticky-footer'] = true;
+	$boldgrid_framework_configs['temp']['attribution_links'] = true;
 
-	// Assign Locations for Generic Header.
+	// Disable background image.
+	$boldgrid_framework_configs['customizer-options']['background']['defaults']['background_image'] = false;
+
+	// Assign menus, widgets, and actions to locations in generic header template.
 	$boldgrid_framework_configs['template']['locations']['header'] = array(
 		'1' => array( '[menu]secondary' ),
 		'5' => array( '[widget]boldgrid-widget-1' ),
 		'6' => array( '[action]boldgrid_site_identity' ),
 		'7' => array( '[action]boldgrid_primary_navigation' ),
-		'11' => array( '[widget]boldgrid-widget-2' ),
 		'8' => array( '[menu]social' ),
 		'9' => array( '[menu]tertiary' ),
+		'11' => array( '[widget]boldgrid-widget-2' ),
 	);
 
-	// Assign Locations for Generic Footer.
+	// Assign menus, widgets, and actions to locations in generic footer template.
 	$boldgrid_framework_configs['template']['locations']['footer'] = array(
 		'1' => array( '[menu]footer_center' ),
 		'5' => array( '[widget]boldgrid-widget-3' ),
 		'8' => array( '[action]boldgrid_display_attribution_links' ),
 	);
 
-	// Enable BoldGrid Color Palette System.
+	/**
+	 * Customizer Configs
+	 */
 	$boldgrid_framework_configs['customizer-options']['colors']['enabled'] = true;
 	$boldgrid_framework_configs['customizer-options']['colors']['defaults'] = array(
 		array(
@@ -109,8 +110,8 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['customizer-options']['colors']['light_text'] = '#ffffff';
 	$boldgrid_framework_configs['customizer-options']['colors']['dark_text'] = '#2a2a2a';
 
-	// Buttons
-	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
+	// Enable Typography Controls.
+	$boldgrid_framework_configs['customizer-options']['typography']['enabled'] = true;
 
 	// Typography Headings.
 	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['headings_font_family'] = 'Heebo';
@@ -135,7 +136,10 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	// Typography Tagline Classes.
 	$boldgrid_framework_configs['template']['tagline-classes'] = 'h3 alt-font site-description';
 
-	// Icons.
+	// Button Classes.
+	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
+
+	// Social Icons.
 	$boldgrid_framework_configs['social-icons']['size'] = 'large';
 
 	// Menu Locations.
@@ -145,8 +149,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['menu']['locations']['tertiary'] = 'Below Header';
 	$boldgrid_framework_configs['menu']['locations']['footer_center'] = "Footer Bottom Left";
 	
-
-	// Name Widget Areas.
+	// Widget Areas.
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-1']['name'] = 'Above Primary Navigation';
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-2']['name'] = 'Below Site Title';
 

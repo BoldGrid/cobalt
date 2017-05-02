@@ -1,42 +1,16 @@
 /*
 Theme Name: Cobalt
 Author: The BoldGrid Team
-Theme URI: https://www.boldgrid.com
-Author URI: https://www.boldgrid.com/the-team
+Theme URI: https://www.boldgrid.com/themes/cobalt/
+Author URI: https://www.boldgrid.com/the-team/
 Description: Designed specifically for use with the BoldGrid suite of plugins, all BoldGrid themes are highly customizable, responsive to a wide range of devices, and of course, beautiful. Every BoldGrid theme includes five pre-selected color palettes and an advanced tool for creating your own unique palette. In addition, all themes feature multiple menu locations and widget areas, which are easily customizable to suit your needs. So if you're looking for a theme that looks great, feels modern and professional, and offers plenty of features to make it your own, you've chosen well.
-Version: 1.12
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: boldgrid-cobalt
 Template: prime
-Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready
+Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready, boldgrid-theme-99
 */
-
-/*------------------------------------------------------------------------
->>> TABLE OF CONTENTS:
---------------------------------------------------------------------------
-# Base Styles
-	## Positioning
-	## Typography
-	## Titles
-	## Buttons
-	## Et Cetera
-# Header
-# Navigation
-	## Main Menu
-	## Other Menus
-	## Social Menus
-# Modules
-	## Global
-	## Alpha
-	## Beta
-	## Gamma
-# Pages
-# Posts
-# Plugins
-	## WooCommerce
-# Footer
-------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------
 # Base Styles
@@ -100,6 +74,7 @@ p {
 		padding: 0 250px;
 	}
 }
+
 /*-----------------------------------------------
 ## Typography
 -----------------------------------------------*/
@@ -379,18 +354,6 @@ ul li,
 ol li {
 	line-height: 2.3;
 }
-
-/*-----------------------------------------------
-## Alpha
------------------------------------------------*/
-
-/*-----------------------------------------------
-## Beta
------------------------------------------------*/
-
-/*-----------------------------------------------
-## Gamma
------------------------------------------------*/
 
 /*------------------------------------------------------------------------
 # Pages
@@ -757,47 +720,6 @@ dt {
 }
 .gridblock-section-test {
 	background: orange;
-}
-
-/* set the default gridblock styles */
-.gridblock {
-	overflow: hidden;
-	width:100%;
-	margin:0px;
-}
-.gridblock > .container-fluid > .row,
-.gridblock > .container > .row {
-	position: relative;
-	padding: 10em ;
-	background: orange;
-	color: #fff;
-	text-align: center;
-}
-/* Common gridblock styles */
-.gridblock::before,
-.gridblock::after {
-	position: absolute;
-	content: '';
-	pointer-events: none;
-}
-
-/* Triangles */
-.gridblock-section-triangle::before,
-.gridblock-section-triangle::after {
-	left: 50%;
-	width: 100px;
-	height: 100px;
-	-webkit-transform: translateX(-50%) rotate(45deg);
-	transform: translateX(-50%) rotate(45deg);
-}
-.gridblock-section-triangle::before {
-	top: -50px;
-	background: teal;
-}
-.gridblock-section-triangle::after {
-	bottom: -50px;
-	z-index: 10;
-	background: inherit;
 }
 
 /* custom */
