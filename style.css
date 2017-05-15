@@ -9,8 +9,38 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: boldgrid-cobalt
 Template: prime
-Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready, boldgrid-theme-99
+Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready, boldgrid-theme-99 
 */
+
+/*------------------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------------------
+# Base Styles
+	## Positioning
+	## Typography
+	## Titles
+# Header
+# Navigation
+	## Main Menu
+	## Other Menus
+	## Social Menus
+# Pages
+	## Global
+	## Content
+	## Jumbotron
+# Posts
+	## Comments
+	## Sidebar Widgets
+	## Calendar Widget
+	## Forms
+	## Posts Navigation
+	## Sidebar Navigation
+	## Post Meta Data
+	## Panels
+	## Posts Formats
+# Footer
+# Custom
+------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------
 # Base Styles
@@ -35,244 +65,83 @@ h1, h2, h3, h4, h5, h6,
 p {
 	margin-bottom: 15px;
 }
-.page-template-page_home .site-content {
-	clear: both;
-	padding-top: 0;
-	padding-bottom: 0;
-}
-.entry-content, .entry-summary, .page-content {
-    margin: 0;
-}
-
-/* xs */
-/* custom class */
-.section-content-padding {
-		padding: 0 50px;
-}
-.section-logo-padding {
-		padding: 0 25px;
-	}
-
-/* sm */
-/* custom class */
-@media (min-width: 768px) {
-	.section-content-padding {
-		padding: 0 80px;
-	}
-	.section-logo-padding {
-		padding: 0 80px;
-	}
-}
-
-/* md */
-/* custom class */
-@media (min-width: 992px) {
-	.section-content-padding {
-		padding: 0 140px;
-	}
-	.section-logo-padding {
-		padding: 0 250px;
-	}
-}
 
 /*-----------------------------------------------
 ## Typography
 -----------------------------------------------*/
-.title-main {
-	font-weight: bold;
-}
 a,
 .link-primary:hover,
 .link-primary:focus,
 .link-secondary:hover,
 .link-secondary:focus,
-#commentsubmit,
-#commentsubmit:hover,
-#commentsubmit:active,
 #footer-center-menu a,
-.button-primary:hover,
-.button-primary:active,
-.button-secondary,
-.button-secondary:hover,
-.button-secondary:active,
-input[type="submit"]:hover,
-input[type="submit"]:focus,
 #menu-social li a:hover,
 #menu-social li a:focus,
 #secondary-menu a[href]:hover,
-#tertiary-menu a[href]:hover,
-.comment-reply-link.button-primary,
-.comment-reply-link.button-primary:hover,
-.comment-reply-link.button-primary:active {
+#tertiary-menu a[href]:hover {
 	text-decoration: none;
 }
-.entry-footer a,
 .site-footer a,
+.entry-footer a,
 .link-primary,
 .link-secondary,
-.entry-content a:hover,
 #wp-calendar tr td#today,
 #footer-center-menu a:hover,
 #footer-center-menu .current_page_item a {
 	text-decoration: underline;
 }
-.entry-title a:hover,
-.entry-title a:focus,
-.entry-footer a:hover,
-.entry-footer a:focus,
 .site-footer a:hover,
-.site-footer a:focus {
+.site-footer a:focus,
+.entry-footer a:hover,
+.entry-footer a:focus {
 	text-decoration: none;
-}
-.xs-center,
-.site-footer,
-.site-info,
-.attribution,
-.p-button-primary,
-.p-button-secondary {
-	text-align: center;
-}
-.entry-title,
-.page-title,
-.title-main {
-	text-align: left;
-	letter-spacing: -.05em;
-}
-pre {
-    border: none;
-    border-radius: 0;
-}
-
-/* xs */
-.navbar-default .navbar-nav,
-.navbar-default .navbar-nav .open .dropdown-menu {
-	text-align: center;
-}
-
-/* sm */
-@media (min-width: 768px) {
-	.navbar-default .navbar-nav,
-	.navbar-default .navbar-nav .open .dropdown-menu {
-		text-align: left;
-	}
-}
-
-/* md */
-@media (min-width: 992px) {
-	.xs-center,
-	.p-button-primary,
-	.p-button-secondary {
-		text-align: left;
-	}
-	.title-main {
-		text-align: right;
-	}
-}
-
-/* Custom */
-#menu-social {
-    padding: 15px 0 0;
 }
 
 /*-----------------------------------------------
 ## Titles
 -----------------------------------------------*/
-.page-template-page_home .entry-title {
-	display: none;
+.site-title {
+	margin-bottom: 0;
+}
+.site-title a {
+	font-weight: bold;
+}
+.site-description {
+	margin-top: 0;
+}	
+.site-branding {
+	margin-bottom: -10px;
 }
 .entry-title,
 .page-title {
+	letter-spacing: -.05em;
 	margin-top: 1em;
 	padding-bottom: 0;
 	padding-top: 0;
+	text-align: left;
 }
-.entry-header {
-	margin-bottom: 60px;
-}
-.home .entry-header {
-	display: none;
-}
-.title-main {
-	margin: 0;
-	padding: 20px 0;
-}
-.hentry {
-	margin: 0;
-}
-
-/*-----------------------------------------------
-## Buttons
------------------------------------------------*/
-.button-primary,
-input[type="submit"] {
-	border-radius: 0;
-	display: inline-block;
-	padding: 8px 35px;
-}
-.form-submit .submit {
-	margin-bottom: 10px;
-}
-
-/* Positioning */
-.p-button-primary,
-.p-button-secondary {
-	margin: 25px 0;
-}
-
-/* Block vs. Inline */
-.button-primary,
-.button-secondary {
-	display: block;
-	margin-top: 15px;
-}
-a.btn:hover {
+.entry-title a:hover,
+.entry-title a:focus {
 	text-decoration: none;
 }
-
-/* sm */
-@media (min-width: 500px) {
-	.button-primary,
-	.button-secondary {
-		display: inline;
-		margin-top: 0;
-	}
-	.gridblock .p-button-secondary {
-		margin: 25px 0;
-	}
-}
-
-/* Custom */
-.sidebar-1 .sidebar #searchform .button-primary {
-	padding: 0;
-}
-
-/*-----------------------------------------------
-## Et Cetera
------------------------------------------------*/
-hr {
-	border: 0;
-	height: 1px;
+.archive .page-title {
+	margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------------
 # Header
 ------------------------------------------------------------------------*/
-.site-title {
-	margin-bottom: 0;
-}
-.site-description {
-	margin-top: 0;
-}	
 .site-header {
 	padding: 10px 0;
 }
-.site-branding {
-	margin-bottom: -10px;
+.page-header {
+	border-bottom: none;
+	margin: 40px 0 0;
+	padding-bottom: 9px;
 }
-.boldgrid-widget {
-	background: none !important;
+.home .entry-header {
+	display: none;
 }
-
 /*------------------------------------------------------------------------
 # Navigation
 ------------------------------------------------------------------------*/
@@ -283,10 +152,10 @@ hr {
 .navbar {
 	background-color: none;
 	border: none;
+	border-radius: 0;
 	min-height: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
-	border-radius: 0;
 }
 .navbar-default {
 	background: none;
@@ -298,14 +167,29 @@ hr {
 .navbar-default .navbar-nav > li:first-child > a {
 	margin-left: 0;
 }
+
+/* Hover & Active */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .current-menu-parent > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
 	background: none;
 }
-#secondary-menu .current_page_item a,
-#tertiary-menu .current_page_item a {
-	background: none;
+
+/* xs */
+.navbar-default .navbar-nav,
+.navbar-default .navbar-nav .open .dropdown-menu {
+	text-align: center;
 }
 
 /* sm */
@@ -313,7 +197,10 @@ hr {
 	.navbar-default {
 		float: right;
 		margin-top: 10px;
-		margin-right: -30px;
+	}
+	.navbar-default .navbar-nav,
+	.navbar-default .navbar-nav .open .dropdown-menu {
+		text-align: left;
 	}
 }
 
@@ -329,13 +216,24 @@ hr {
 #tertiary-menu {
 	background: none;
 }
+#secondary-menu .current_page_item a,
+#tertiary-menu .current_page_item a {
+	background: none;
+}
 .footer-center-items li::after,
 .boldgrid-framework-menu li::after {
 	content: "";
 }
 
+/*-----------------------------------------------
+## Social Menus
+-----------------------------------------------*/
+#menu-social {
+    padding: 15px 0 0;
+}
+
 /*------------------------------------------------------------------------
-# Modules
+# Pages
 ------------------------------------------------------------------------*/
 
 /*-----------------------------------------------
@@ -348,59 +246,24 @@ blockquote {
 blockquote p {
 	padding-left: 15px;
 }
-
-/* Custom */
+hr {
+	border: 0;
+	height: 1px;
+}
 ul li,
 ol li {
 	line-height: 2.3;
 }
+pre {
+    border: none;
+    border-radius: 0;
+}
 
-/*------------------------------------------------------------------------
-# Pages
-------------------------------------------------------------------------*/
-/* Forms */
-#ninja_forms_field_1_div_wrap,
-#ninja_forms_field_2_div_wrap,
-#ninja_forms_field_3_div_wrap {
-	width: 50%;
-	float: left;
-	padding: 5px 15px;
-}
-.home .submit-wrap
-#ninja_forms_field_4_div_wrap,
-#ninja_forms_field_39_div_wrap {
-	width: 50%;
-	float: right;
-	padding: 5px 15px;
-}
-.submit-wrap {
-	float: none;
-}
-textarea#ninja_forms_field_4 {
-	height: 98px;
-}
-input#ninja_forms_field {
-	height: 50px;
-}
-input#ninja_forms_field_5 {
-	float: left;
-}
-.home input.form-control,
-.home select.form-control,
-.home textarea.form-control {
-	background: none;
-}
-.form-control {
-	border-radius: 0;
-}
-.panel-footer {
-	padding: 20px 15px;
-}
-body.mce-content-body {
-	background: none;
-}
-.form-inline .form-control {
-    margin-bottom: 6px;
+/*-----------------------------------------------
+## Content
+-----------------------------------------------*/
+.entry-content {
+	margin-top: 0;
 }
 
 /* 404 Page */
@@ -411,11 +274,30 @@ body.mce-content-body {
 .error404 .site-content {
 	padding:0;
 }
+.hentry {
+	margin: 0;
+}
 
-/* Search Page */
+/*-----------------------------------------------
+## Jumbotron
+-----------------------------------------------*/
+.jumbotron p {
+    margin-top: 30px;
+}
+.jumbotron {
+	margin-bottom: 30px;
+}
+
+/* Search */
+.search-no-results .jumbotron {
+	padding-left: 0;
+}
+.search-no-results .container .jumbotron {
+	padding-left: 0;
+}
 .search .jumbotron {
-	text-align: center;
 	background: none;
+	text-align: center;
 }
 .search .site-content {
 	padding: 0;
@@ -424,34 +306,21 @@ body.mce-content-body {
 /*------------------------------------------------------------------------
 # Posts
 ------------------------------------------------------------------------*/
-.widget {
-	clear: both;
-	padding-bottom: 20px;
+.post .entry-title,
+.post .page-title {
+    margin-bottom: 0;
 }
-.page-header {
-	border-bottom: none;
-	margin: 40px 0 0;
-	padding-bottom: 9px;
-}
-#wp-calendar tr {
-	background: none;
-}
-footer aside.widget {
-    padding-bottom: 0 !important;
+.post .entry-header {
+    margin-bottom: 30px;
 }
 
-/* Comments */
+/*-----------------------------------------------
+## Comments
+-----------------------------------------------*/
 .comment-form-comment label {
 	float: left;
 	padding-right: 15px;
 }
-
-/* Buttons */
-.form-submit .submit {
-	margin-bottom: 10px;
-}
-
-/* Custom */
 #cancel-comment-reply-link {
 	float: right;
 	text-decoration: underline;
@@ -490,23 +359,25 @@ footer aside.widget {
 	margin: 0 0 50px;
 }
 .comments {
-	padding: 25px;
 	margin-top: 25px;
-}
-.panel-footer {
-	padding: 0 15px 20px;
-	border-top: none;
+	padding: 25px;
 }
 
-/* Sidebar Widget Area */
+/*-----------------------------------------------
+## Sidebar Widgets
+-----------------------------------------------*/
+.widget {
+	clear: both;
+	padding-bottom: 20px;
+}
 .widget-area {
 	margin-top: 25px;
 	padding: 25px;
 	list-style:none;
 }
 .sidebar {
-	padding: 20px 12px;
 	margin-bottom: 25px;
+	padding: 20px 12px;
 }
 aside.sidebar h2.widget-title {
 	padding-bottom: 10px;
@@ -520,7 +391,71 @@ aside.sidebar h2.widget-title {
     text-decoration: none;
 }
 
-/* Navigation */
+/*-----------------------------------------------
+## Calendar Widget
+-----------------------------------------------*/
+#wp-calendar tr {
+	background: none;
+}
+#wp-calendar {
+	width: 100%; 
+}
+#wp-calendar caption { 
+	text-align: left; 
+	margin-top: 10px; 
+	margin-bottom: 15px; 
+}
+#wp-calendar thead th { 
+	padding-bottom: 10px; 
+}
+#wp-calendar tbody td {
+	padding:8px; 
+	text-align: center; 
+}
+#wp-calendar tfoot #next { 
+	text-align: right; 
+}
+#wp-calendar tfoot #prev { 
+	padding-top: 10px; 
+}
+.widget_calendar td, th {
+	border-bottom: none !important;
+}
+
+/* Tables */
+.table > thead > tr > th {
+    border-bottom: none;
+}
+td, th {
+    padding: 1.2rem 1.5rem;
+}
+dd {
+    margin-left: 4.2rem;
+    margin-bottom: 1.2rem;
+}
+dt {
+	margin-bottom:.5rem;
+}
+
+/*-----------------------------------------------
+## Forms
+-----------------------------------------------*/
+.home input.form-control,
+.home select.form-control,
+.home textarea.form-control {
+	background: none;
+}
+.form-control {
+	border-radius: 0;
+	display: inline-block;
+}
+.form-inline .form-control {
+    margin-bottom: 6px;
+}
+
+/*-----------------------------------------------
+## Post Navigation
+-----------------------------------------------*/
 .navigation.posts-navigation {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -550,6 +485,10 @@ aside.sidebar h2.widget-title {
 .nav-previous a:focus {
 	text-decoration: underline;
 }
+
+/*-----------------------------------------------
+## Sidebar Navigation
+-----------------------------------------------*/
 .sidebar .nav > li > a:focus, 
 .sidebar .nav > li > a:hover {
 	background: none transparent;
@@ -563,7 +502,9 @@ aside.sidebar h2.widget-title {
 	line-height: 1.6;
 }
 
-/* entry- */
+/*-----------------------------------------------
+## Post Meta Data
+-----------------------------------------------*/
 .entry-meta {
 	padding-bottom: 30px;
 	padding-top: 25px;
@@ -581,60 +522,10 @@ aside.sidebar h2.widget-title {
 .entry-footer a:focus,   {
 	text-decoration: none;
 }
-.post .entry-title,
-.post .page-title {
-    margin-bottom: 0;
-}
-.post .entry-header {
-    margin-bottom: 30px;
-}
-.archive .page-title {
-	margin-bottom: 0;
-}
 
-/* calendar widget */
-#wp-calendar {
-	width: 100%; 
-}
-#wp-calendar caption { 
-	text-align: left; 
-	margin-top: 10px; 
-	margin-bottom: 15px; 
-}
-#wp-calendar thead th { 
-	padding-bottom: 10px; 
-}
-#wp-calendar tbody td { 
-	text-align: center; 
-	padding:8px;
-}
-#wp-calendar tfoot #next { 
-	text-align: right; 
-}
-#wp-calendar tfoot #prev { 
-	padding-top: 10px; 
-}
-.widget_calendar td, th {
-	border-bottom: none !important;
-}
-
-/* tables */
-.table > thead > tr > th {
-    border-bottom: none;
-}
-td, th {
-    padding: 1.2rem 1.5rem;
-}
-
-dd {
-    margin-left: 4.2rem;
-    margin-bottom: 1.2rem;
-}
-dt {
-	margin-bottom:.5rem;
-}
-
-/* Panels */
+/*-----------------------------------------------
+## Panels
+-----------------------------------------------*/
 .panel {
 	border: none !important;
 	box-shadow: none;
@@ -642,8 +533,14 @@ dt {
 .panel-heading {
 	border-bottom: none !important;
 }
+.panel-footer {
+	border-top: none;
+	padding: 0 15px 20px;
+}
 
-/* type-post */
+/*-----------------------------------------------
+## Post Formats
+-----------------------------------------------*/
 .type-post.hentry {
     margin-bottom: 60px;
 }
@@ -654,45 +551,19 @@ dt {
 	text-align: left !important;
 }
 
-/* search */
-.search-no-results .jumbotron {
-	padding-left: 0;
-}
-.search-no-results .container .jumbotron {
-	padding-left: 0;
-}
-
-/* jumbotron */
-.jumbotron p {
-    margin-top: 30px;
-}
-.jumbotron {
-	margin-bottom: 30px;
-}
-
-/*------------------------------------------------------------------------
-# Plugins
-------------------------------------------------------------------------*/
-
-/*-----------------------------------------------
-## WooCommerce
------------------------------------------------*/
-/* Search Form */
-.form-control {
-	display: inline-block;
-}
-
 /*------------------------------------------------------------------------
 # Footer
 ------------------------------------------------------------------------*/
 .site-footer {
 	padding: 20px 0;
+	text-align: center;
 }
 .site-footer .widget {
 	padding: 0;
 }
 .site-info {
 	margin-bottom: -10px;
+	text-align: center;
 }
 .footer-center-items {
 	padding-left: 0;
@@ -703,37 +574,17 @@ dt {
 .attribution {
 	margin-top: -10px;
 	padding-bottom: 30px;
+	text-align: center;
 }
 .entry-footer {
+	display: none;
 	height: 0;
 	margin-top: -30px;
-	display: none;
+}
+footer aside.widget {
+    padding-bottom: 0 !important;
 }
 
-/* Disabled Footer */
-.disabled-footer .site-footer {
-	height: auto;
-	padding: 15px 0;
-}
-.disabled-footer .content-area {
-	margin-bottom: 0;
-}
-.gridblock-section-test {
-	background: orange;
-}
-
-/* custom */
-.site-title a {
-	font-weight: bold;
-}
-.section-bg-padding {
-		padding: 15px;
-	}
-
-/* md */
-/* custom */
-@media (min-width: 992px) {
-	.section-bg-padding {
-		padding: 180px 20em 180px 20em;
-	}
-}
+/*------------------------------------------------------------------------
+# Custom
+------------------------------------------------------------------------*/

@@ -1,9 +1,4 @@
 /*------------------------------------------------------------------------
-# Variables
-------------------------------------------------------------------------*/
-$rgba_5 : rgba($palette-primary_2, .5);
-
-/*------------------------------------------------------------------------
 # Palettes
 ------------------------------------------------------------------------*/
 .palette-primary {
@@ -29,29 +24,12 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	.navbar-default .navbar-nav > .active > a:focus {
 		color: $palette-primary_1;
 	}
-	.btn-color-1:active, 
-	.btn-color-1.active, 
-	.btn-color-1.is-active, 
-	.btn-color-1-flat:active, 
-	.btn-color-1-flat.active, 
-	.btn-color-1-flat.is-active {
-		background: $palette-primary_1;
-	    color: $text-contrast-palette-primary_1 !important;
-	}
-	.button-primary,
-	.form-submit .submit,
-	input[type="submit"],
-	.button-secondary:hover,
-	.button-secondary:focus {
-		background: $palette-primary_1;
-		color: $text-contrast-palette-primary_1;
-	}
 	.post .entry-title a {
 		background: $palette-primary_neutral-color;
 		color: $palette-primary_1;
 	}
 	.widget-area {
-			border: 1px solid $text-contrast-palette-primary_1;
+		border: 1px solid $text-contrast-palette-primary_1;
 	}
 	.navbar-default .navbar-toggle {
 		border-color: $palette-primary_1;
@@ -65,7 +43,6 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	.link-secondary:focus {
 		color: $palette-primary_2;
 	}
-	
 	kbd,
 	code,
 	.entry-header,
@@ -73,9 +50,7 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	.nav-next,
 	.nav-previous,
 	.nav-next a,
-	.nav-previous a,
-	.form-submit .submit:hover,
-	.form-submit .submit:focus, {
+	.nav-previous a {
 		background: $palette-primary_2;
 		color: $text-contrast-palette-primary_2;
 	}
@@ -96,11 +71,6 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	#footer-center-menu li.menu-social a:focus {
 		color: $palette-primary_3;
 	}
-	.title-main {
-		border-bottom: 1px solid $palette-primary_3;
-		border-top: 1px solid $palette-primary_3;
-		color: $palette-primary_3;
-	}
 	hr {
 		background: $palette-primary_3;
 	}
@@ -115,7 +85,8 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	/*-----------------------------------------------
 	## 4
 	-----------------------------------------------*/
-	.gridblock .heading-alt,
+	.site-footer a:hover,
+	.site-footer a:focus,
 	#secondary-menu a[href]:hover,
 	#tertiary-menu a[href]:hover,
 	#footer-widget-area caption,
@@ -126,6 +97,8 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	}
 
 	/* Dropdown Child */
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus,
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
 	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -141,20 +114,11 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	.navbar-default .navbar-toggle:focus .icon-bar {
 		background-color: $text-contrast-palette-primary_4;
 	}
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background: $palette-primary_4;
-		color: $text-contrast-palette-primary_4;
-	}
 	.logged-in-as > a,
 	#secondary-menu .current_page_item a,
 	#tertiary-menu .current_page_item a,
 	#menu-social-items .current_page_item a {
 		background: none;
-		color: $palette-primary_4;
-	}
-	.site-footer a:hover,
-	.site-footer a:focus {
 		color: $palette-primary_4;
 	}
 
@@ -180,7 +144,12 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	#wp-calendar tr td#today,
 	.widget ul#recentcomments > li,
 	.comments-area .comment-content p,
-	.navbar-default .navbar-nav > li > a {
+	.navbar-default .navbar-nav > li > a,
+	.navbar-default .navbar-nav > .open > a,
+	.navbar-default .navbar-nav > .open > a:hover,
+	.navbar-default .navbar-nav > .open > a:focus,
+	.navbar-default .navbar-nav > .current-menu-parent > a
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a  {
 		background: $palette-primary_5;
 		color: $text-contrast-palette-primary_5;
 	}
@@ -188,14 +157,6 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	.widget .nav > li > a:focus {
 		background: $palette-primary_5;
 		color: $palette-primary_1;
-	}
-	.navbar-default .navbar-nav > .open > a,
-	.navbar-default .navbar-nav > .open > a:hover,
-	.navbar-default .navbar-nav > .open > a:focus,
-	.navbar-default .navbar-nav > .current-menu-parent > a
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-		background: $palette-primary_5;
-		color: $text-contrast-palette-primary_5;
 	}
 	&.home .entry-footer {
 		background-color: $palette-primary_5;
@@ -252,7 +213,8 @@ $rgba_5 : rgba($palette-primary_2, .5);
 /*------------------------------------------------------------------------
 # Body Classes
 ------------------------------------------------------------------------*/
-.palette-primary.mce-content-body {
+.palette-primary.mce-content-body,
+.palette-primary.disabled-footer .site-footer  {
 	background: $palette-primary_neutral-color;
 	color: $text-contrast-palette-primary_neutral-color;
 }
@@ -263,9 +225,5 @@ $rgba_5 : rgba($palette-primary_2, .5);
 	background: $palette-primary_neutral-color;
 }
 .palette-primary.post-template-default .entry-meta {
-	color: $text-contrast-palette-primary_neutral-color;
-}
-.palette-primary.disabled-footer .site-footer {
-	background: $palette-primary_neutral-color;
 	color: $text-contrast-palette-primary_neutral-color;
 }
