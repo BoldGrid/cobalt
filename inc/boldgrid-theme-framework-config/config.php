@@ -186,7 +186,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 
 	// Button Classes
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
-	$boldgrid_framework_configs['components']['buttons']['variables']['button-secondary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
+	$boldgrid_framework_configs['components']['buttons']['variables']['button-secondary-classes'] = '.btn, .btn-3d, .btn-color-2, .btn-rounded';
 
 	// Social Icons.
 	$boldgrid_framework_configs['social-icons']['size'] = 'large';
@@ -214,7 +214,7 @@ add_filter( 'boldgrid_theme_framework_config', 'boldgrid_theme_framework_config'
 function filter_logo_controls( $controls ) {
 	$controls['logo_font_family']['default'] = 'Heebo';
 	$controls['logo_font_size']['default'] = 36;
-	$controls['logo_letter_spacing']['default'] = -1;
+	$controls['logo_letter_spacing']['default'] = 1;
 
 	// Controls above will override framework defaults
 	return $controls;

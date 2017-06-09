@@ -80,7 +80,6 @@ a,
 .entry-footer a,
 .link-primary,
 .link-secondary,
-#wp-calendar tr td#today,
 #footer-center-menu a:hover,
 #footer-center-menu .current_page_item a {
 	text-decoration: underline;
@@ -102,7 +101,7 @@ a,
 	font-weight: bold;
 }
 .site-description {
-	margin-top: 0;
+	padding-bottom: 15px;
 }	
 .site-branding {
 	margin-bottom: -10px;
@@ -145,6 +144,7 @@ a,
 }
 .navbar-default .navbar-nav > li > a {
 	padding: 10px;
+	text-decoration: none;
 }
 .navbar-default .navbar-nav > li:first-child > a {
 	margin-left: 0;
@@ -177,6 +177,7 @@ a,
 /* sm */
 @media (min-width: 768px) {
 	.navbar-default {
+		float: right;
 		margin-top: 10px;
 	}
 	.navbar-default .navbar-nav,
@@ -220,7 +221,8 @@ blockquote {
 	padding-bottom: 0;
 	padding-top: 0;
 }
-blockquote p {
+blockquote p,
+.mod-blockquote p {
 	padding-left: 15px;
 }
 hr {
@@ -258,6 +260,9 @@ pre {
 .search .jumbotron {
 	background: none;
 	text-align: center;
+}
+.search .site-content {
+	padding: 15px;
 }
 
 /*------------------------------------------------------------------------
@@ -351,7 +356,7 @@ aside.sidebar h2.widget-title {
 	text-align: right; 
 }
 #wp-calendar tfoot #prev { 
-	padding-top: 10px; 
+	text-align: left;	
 }
 
 /* Tables */
@@ -399,18 +404,18 @@ dt {
 }
 
 /*-----------------------------------------------
-## Sidebar Navigation
+## Widget Navigation
 -----------------------------------------------*/
-.sidebar .nav > li > a:focus, 
-.sidebar .nav > li > a:hover {
-	background: none transparent;
+.widget .nav > li > a:focus, 
+.widget .nav > li > a:hover {
+	background: transparent;
 	text-decoration: none;
 }
-.sidebar .nav > li > a {
+.widget nav > li > a {
 	padding: 8px 0;
 	text-decoration: underline;
 }
-.sidebar .nav > li {
+.nav > li {
 	line-height: 1.6;
 }
 
@@ -435,6 +440,7 @@ dt {
 ## Panels
 -----------------------------------------------*/
 .panel {
+	background: transparent;
 	border: none;
 	box-shadow: none;
 }
@@ -462,4 +468,16 @@ dt {
 }
 .footer-center-items li a {
 	padding: 5px;
+}
+
+/*------------------------------------------------------------------------
+# Plugins
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## WooCommerce
+-----------------------------------------------*/
+.woocommerce-cart .woocommerce,
+.woocommerce-account .woocommerce {
+	margin-top: 50px;
 }

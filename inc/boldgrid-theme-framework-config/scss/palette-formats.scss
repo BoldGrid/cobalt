@@ -13,10 +13,12 @@
 	a:focus,
 	.site-header a,
 	.site-footer a,
-	.comment-meta a,
 	.site-description,
 	#secondary-menu a,
 	#tertiary-menu a,
+	.link-primary,
+	.link-primary:hover,
+	.link-primary:focus,	
 	.navbar-default .navbar-nav > li > a:hover,
 	.navbar-default .navbar-nav > li > a:focus,	
 	.navbar-default .navbar-nav > .active > a,
@@ -24,14 +26,18 @@
 	.navbar-default .navbar-nav > .active > a:focus {
 		color: $palette-primary_1;
 	}
-	.post .entry-title a {
+	mark {
+		background: $palette-primary_1;
+		color: $text-contrast-palette-primary_1;
+	}
+	.post .entry-title a,
+	.pager li > a, {
 		background: $palette-primary_neutral-color;
 		color: $palette-primary_1;
 	}
-	.widget-area {
-		border: 1px solid $text-contrast-palette-primary_1;
-	}
-	.navbar-default .navbar-toggle {
+	.navbar-default .navbar-toggle,
+	.pager li > a,
+	#reviews #comments ol.commentlist li .comment-text {
 		border-color: $palette-primary_1;
 	}
 
@@ -43,6 +49,7 @@
 	.link-secondary:focus {
 		color: $palette-primary_2;
 	}
+	.button-secondary,
 	kbd,
 	code,
 	.entry-header,
@@ -58,9 +65,6 @@
 	/*-----------------------------------------------
 	## 3
 	-----------------------------------------------*/
-	.link-primary,
-	.link-primary:hover,
-	.link-primary:focus,
 	#menu-social li a:hover,
 	#menu-social li a:focus,
 	#secondary-menu li.menu-social a:hover,
@@ -74,12 +78,9 @@
 	hr {
 		background: $palette-primary_3;
 	}
-	blockquote {
+	blockquote,
+	.mod-blockquote p {
 		border-left: 7px solid $palette-primary_3;
-	}
-	.text-widget,
-	.site-footer .widget-title {
-		color: $text-contrast-palette-primary_3;
 	}
 
 	/*-----------------------------------------------
@@ -90,7 +91,6 @@
 	#secondary-menu a[href]:hover,
 	#tertiary-menu a[href]:hover,
 	#footer-widget-area caption,
-	#footer-widget-area .widget-title,
 	.footer-center-items > li > a:hover,
 	.footer-center-items > li > a:focus {
 		color: $palette-primary_4;
@@ -126,7 +126,6 @@
 	## 5
 	-----------------------------------------------*/
 	pre,
-	caption,
 	.sidebar,
 	.comments,
 	.panel-body,
@@ -138,48 +137,21 @@
 	.panel-heading,
 	.media-heading,
 	.comments-title,
-	.site-footer .widget,
-	.header .textwidget p,
+	.well,
 	.dropdown-menu > li > a,
-	#wp-calendar tr td#today,
 	.widget ul#recentcomments > li,
 	.comments-area .comment-content p,
 	.navbar-default .navbar-nav > li > a,
 	.navbar-default .navbar-nav > .open > a,
 	.navbar-default .navbar-nav > .open > a:hover,
 	.navbar-default .navbar-nav > .open > a:focus,
-	.navbar-default .navbar-nav > .current-menu-parent > a
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a  {
+	.navbar-default .navbar-nav > .current-menu-parent > a,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 		background: $palette-primary_5;
-		color: $text-contrast-palette-primary_5;
-	}
-	.widget .nav > li > a:hover,
-	.widget .nav > li > a:focus {
-		background: $palette-primary_5;
-		color: $palette-primary_1;
-	}
-	&.home .entry-footer {
-		background-color: $palette-primary_5;
-	}
-	.entry-footer a,
-	.entry-footer a:hover,
-	.entry-footer a:focus {
-		background-color: $palette-primary_5;
 		color: $text-contrast-palette-primary_5;
 	}
 	.site-header {
 		color: $palette-primary_5;
-	}
-	.home input.form-control,
-	.home select.form-control,
-	.home textarea.form-control {
-		background: $palette-primary_5;
-		border: 2px solid $text-contrast-palette-primary_5;
-		color: $text-contrast-palette-primary_5;
-	}
-	textarea#ninja_forms_field_4 {
-		background: none;
-		color: $text-contrast-palette-primary_5;
 	}
 	.table > tbody > tr > td, 
 	.table > tbody > tr > th, 
@@ -188,6 +160,9 @@
 	.table > thead > tr > td, 
 	.table > thead > tr > th {
 		border-top: 1px solid $text-contrast-palette-primary_5;
+	}
+	.widget-title {
+		color: $text-contrast-palette-primary_5;
 	}
 
 	/* sm */
@@ -205,25 +180,24 @@
 		background: $palette-primary_neutral-color;
 		color: $text-contrast-palette-primary_neutral-color;
 	}
-	#boldgrid-sticky-push, #boldgrid-sticky-filler {
+	#boldgrid-sticky-push,
+	#boldgrid-sticky-filler {
 		background-color: $palette-primary_neutral-color;
+	}
+	.well {
+		border: 1px solid $palette-primary_neutral-color;
+	}
+	#reviews #comments ol.commentlist li .meta,
+	.pager li > a:focus,
+	.pager li > a:hover {
+		color: $text-contrast-palette-primary_neutral-color;
 	}
 }
 
 /*------------------------------------------------------------------------
 # Body Classes
 ------------------------------------------------------------------------*/
-.palette-primary.mce-content-body,
-.palette-primary.disabled-footer .site-footer  {
+.palette-primary.disabled-footer .site-footer {
 	background: $palette-primary_neutral-color;
-	color: $text-contrast-palette-primary_neutral-color;
-}
-.palette-primary.home.mce-content-body {
-	background: none;
-}
-.palette-primary.post-template-default .entry-header {
-	background: $palette-primary_neutral-color;
-}
-.palette-primary.post-template-default .entry-meta {
 	color: $text-contrast-palette-primary_neutral-color;
 }
