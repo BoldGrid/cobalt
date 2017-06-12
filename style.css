@@ -19,26 +19,20 @@ Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-la
 	## Positioning
 	## Typography
 	## Titles
+	## Buttons
+	## Et Cetera
 # Header
 # Navigation
 	## Main Menu
 	## Other Menus
 	## Social Menus
-# Pages
+# Modules
 	## Global
-	## Content
+# Pages
 # Posts
-	## Comments
-	## Sidebar Widgets
-	## Calendar Widget
-	## Forms
-	## Posts Navigation
-	## Sidebar Navigation
-	## Post Meta Data
-	## Panels
-	## Posts Formats
+# Plugins
+	## WooCommerce
 # Footer
-# Custom
 ------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------
@@ -54,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-	letter-spacing: -0.03em;	
+	letter-spacing: -0.03em
 	margin: .25em 0;
 }
 p {
@@ -81,13 +75,41 @@ a,
 #secondary-menu a[href]:hover,
 #tertiary-menu a[href]:hover,
 #footer-center-menu a:hover,
-#footer-center-menu .current_page_item a {
+#footer-center-menu .current_page_item a,
+.nav-next a:hover,
+.nav-next a:focus,
+.nav-previous a:hover,
+.nav-previous a:focus,
+.entry-meta a,
+.tagcloud a,
+.logged-in-as > a,
+.comment-reply-title a,
+.comment-meta a,
+.widget ul#recentcomments > li > a {
 	text-decoration: underline;
 }
+.tagcloud a:hover,
+.tagcloud a:focus,
+.entry-meta a:hover,
+.entry-meta a:focus,
 .site-footer a:hover,
 .site-footer a:focus,
 .entry-footer a:hover,
-.entry-footer a:focus {
+.entry-footer a:focus,
+.widget ul#recentcomments > li > a:hover,
+.widget ul#recentcomments > li > a:focus,
+.widget ul#recentcomments > li > span > a:hover,
+.widget ul#recentcomments > li > span > a:focus,
+.logged-in-as > a:hover,
+.logged-in-as > a:focus,
+.comment-meta a:hover,
+.comment-meta a:focus,
+.comment-reply-title a:hover,
+.comment-reply-title a:focus,
+#cancel-comment-reply-link:hover,
+#cancel-comment-reply-link:focus,
+.entry-title a:hover,
+.entry-title a:focus {
 	text-decoration: none;
 }
 
@@ -112,9 +134,28 @@ a,
 	margin-top: 1em;
 	text-align: left;
 }
-.entry-title a:hover,
-.entry-title a:focus {
-	text-decoration: none;
+
+/*-----------------------------------------------
+## Buttons
+-----------------------------------------------*/
+.form-inline .form-control {
+	margin-bottom: 6px;
+}
+
+/*-----------------------------------------------
+## Et Cetera
+-----------------------------------------------*/
+hr {
+	border: 0;
+	height: 1px;
+}
+ul li,
+ol li {
+	line-height: 2.3;
+}
+pre {
+	border: none;
+	border-radius: 0;
 }
 
 /*------------------------------------------------------------------------
@@ -194,10 +235,6 @@ a,
 .menu-social a {
 	padding: 0 5px;
 }
-#secondary-menu .current_page_item a,
-#tertiary-menu .current_page_item a {
-	background: none;
-}
 .footer-center-items li::after,
 .boldgrid-framework-menu li::after {
 	content: "";
@@ -211,36 +248,23 @@ a,
 }
 
 /*------------------------------------------------------------------------
-# Pages
+# Modules
 ------------------------------------------------------------------------*/
 
 /*-----------------------------------------------
 ## Global
 -----------------------------------------------*/
 blockquote {
-	padding-bottom: 0;
-	padding-top: 0;
+	padding: 0 20px;
 }
 blockquote p,
 .mod-blockquote p {
 	padding-left: 15px;
 }
-hr {
-	border: 0;
-	height: 1px;
-}
-ul li,
-ol li {
-	line-height: 2.3;
-}
-pre {
-	border: none;
-	border-radius: 0;
-}
 
-/*-----------------------------------------------
-## Content
------------------------------------------------*/
+/*------------------------------------------------------------------------
+# Pages
+------------------------------------------------------------------------*/
 .entry-content {
 	margin-top: 0;
 }
@@ -275,36 +299,16 @@ pre {
 .post .entry-header {
 	margin-bottom: 30px;
 }
+.entry-meta {
+	padding-top: 25px;
+}
+.type-post.hentry {
+	margin-bottom: 60px;
+}
 
-/*-----------------------------------------------
-## Comments
------------------------------------------------*/
+/* Comments */
 #cancel-comment-reply-link {
 	float: right;
-	text-decoration: underline;
-}
-.logged-in-as > a,
-.comment-reply-title a,
-.comment-meta a {
-	text-decoration: underline;
-}
-.logged-in-as > a:hover,
-.logged-in-as > a:focus,
-.comment-meta a:hover,
-.comment-meta a:focus,
-.comment-reply-title a:hover,
-.comment-reply-title a:focus,
-#cancel-comment-reply-link:hover,
-#cancel-comment-reply-link:focus {
-	text-decoration: none;
-}
-.widget ul#recentcomments > li > a:hover,
-.widget ul#recentcomments > li > a:focus,
-.widget ul#recentcomments > li > span > a:hover,
-.widget ul#recentcomments > li > span > a:focus {
-	text-decoration: none;
-}
-.widget ul#recentcomments > li > a {
 	text-decoration: underline;
 }
 .widget ul#recentcomments > li.recentcomments {
@@ -320,10 +324,19 @@ pre {
 	margin-top: 25px;
 	padding: 25px;
 }
+.panel {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+.panel-heading {
+	border-bottom: none;
+}
+.panel-footer {
+	border-top: none;
+}
 
-/*-----------------------------------------------
-## Sidebar Widgets
------------------------------------------------*/
+/* Sidebar Widgets */
 .widget {
 	padding-bottom: 20px;
 }
@@ -334,29 +347,20 @@ pre {
 aside.sidebar h2.widget-title {
 	padding-bottom: 10px;
 }
-.tagcloud a {
-	text-decoration: underline;
-}
-.tagcloud a:hover,
-.tagcloud a:focus {
-	text-decoration: none;
-}
 
-/*-----------------------------------------------
-## Calendar Widget
------------------------------------------------*/
+/* Calendar Widget */
 #wp-calendar tr {
 	background: none;
 }
-#wp-calendar caption { 
+#wp-calendar caption {
 	margin-top: 10px; 
-	margin-bottom: 15px; 
+	margin-bottom: 15px;
 }
-#wp-calendar tfoot #next { 
+#wp-calendar tfoot #next {
 	text-align: right; 
 }
-#wp-calendar tfoot #prev { 
-	text-align: left;	
+#wp-calendar tfoot #prev {
+	text-align: left;
 }
 
 /* Tables */
@@ -375,16 +379,7 @@ dt {
 	margin-bottom:.5rem;
 }
 
-/*-----------------------------------------------
-## Forms
------------------------------------------------*/
-.form-inline .form-control {
-	margin-bottom: 6px;
-}
-
-/*-----------------------------------------------
-## Post Navigation
------------------------------------------------*/
+/* Navigation */
 .nav-previous {
 	float: left;
 }
@@ -396,16 +391,6 @@ dt {
 	margin-bottom: 25px;
 	padding: 8px 30px;
 }
-.nav-next a:hover,
-.nav-next a:focus,
-.nav-previous a:hover,
-.nav-previous a:focus {
-	text-decoration: underline;
-}
-
-/*-----------------------------------------------
-## Widget Navigation
------------------------------------------------*/
 .widget .nav > li > a:focus, 
 .widget .nav > li > a:hover {
 	background: transparent;
@@ -419,44 +404,16 @@ dt {
 	line-height: 1.6;
 }
 
-/*-----------------------------------------------
-## Post Meta Data
------------------------------------------------*/
-.entry-meta {
-	padding-top: 25px;
-}
-.entry-meta a,
-.entry-footer a {
-	text-decoration: underline;
-}
-.entry-meta a:hover,
-.entry-meta a:focus,
-.entry-footer a:hover,
-.entry-footer a:focus {
-	text-decoration: none;
-}
+/*------------------------------------------------------------------------
+# Plugins
+------------------------------------------------------------------------*/
 
 /*-----------------------------------------------
-## Panels
+## WooCommerce
 -----------------------------------------------*/
-.panel {
-	background: transparent;
-	border: none;
-	box-shadow: none;
-}
-.panel-heading {
-	border-bottom: none;
-}
-.panel-footer {
-	border-top: none;
-	padding: 0 15px 20px;
-}
-
-/*-----------------------------------------------
-## Post Formats
------------------------------------------------*/
-.type-post.hentry {
-	margin-bottom: 60px;
+.woocommerce-cart .woocommerce,
+.woocommerce-account .woocommerce {
+	margin-top: 50px;
 }
 
 /*------------------------------------------------------------------------
@@ -468,16 +425,4 @@ dt {
 }
 .footer-center-items li a {
 	padding: 5px;
-}
-
-/*------------------------------------------------------------------------
-# Plugins
-------------------------------------------------------------------------*/
-
-/*-----------------------------------------------
-## WooCommerce
------------------------------------------------*/
-.woocommerce-cart .woocommerce,
-.woocommerce-account .woocommerce {
-	margin-top: 50px;
 }
