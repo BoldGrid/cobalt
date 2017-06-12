@@ -145,6 +145,9 @@ a,
 /*-----------------------------------------------
 ## Et Cetera
 -----------------------------------------------*/
+.well {
+	box-shadow: none;
+}
 hr {
 	border: 0;
 	height: 1px;
@@ -296,6 +299,9 @@ blockquote p,
 .archive .page-title {
 	margin-bottom: 0;
 }
+.post h1.entry-title {
+	margin-left: -15px;
+}
 .post .entry-header {
 	margin-bottom: 30px;
 }
@@ -425,4 +431,7 @@ dt {
 }
 .footer-center-items li a {
 	padding: 5px;
+}
+.boldgrid-widget.widget {
+	padding-bottom: 0;
 }
