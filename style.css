@@ -71,15 +71,15 @@ a,
 .link-secondary:focus,
 #footer-center-menu a,
 #menu-social li a:hover,
-#menu-social li a:focus,
-#secondary-menu a[href]:hover,
-#tertiary-menu a[href]:hover {
+#menu-social li a:focus {
 	text-decoration: none;
 }
 .site-footer a,
 .entry-footer a,
 .link-primary,
 .link-secondary,
+#secondary-menu a[href]:hover,
+#tertiary-menu a[href]:hover,
 #footer-center-menu a:hover,
 #footer-center-menu .current_page_item a {
 	text-decoration: underline;
