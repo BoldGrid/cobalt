@@ -52,8 +52,6 @@
 	.button-secondary,
 	kbd,
 	code,
-	.entry-header,
-	.entry-title a,
 	.nav-next,
 	.nav-previous,
 	.nav-next a,
@@ -177,7 +175,8 @@
 	/*-----------------------------------------------
 	## Neutral
 	-----------------------------------------------*/
-	.post .entry-header {
+	.post .entry-header,
+	.entry-title a {
 		background: $palette-primary_neutral-color;
 		color: $text-contrast-palette-primary_neutral-color;
 	}
