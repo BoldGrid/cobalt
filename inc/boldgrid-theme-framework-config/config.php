@@ -182,13 +182,6 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	// Typography Tagline Classes.
 	$boldgrid_framework_configs['template']['tagline-classes'] = 'h5 site-description';
 
-	// Typography Relationships
-	$boldgrid_framework_configs['customizer-options']['typography']['selectors']['h2.alt-font']= array(
-		'type' => 'subheadings',
-		'round' => 'ceil',
-		'amount' => 2.1,
-	);
-
 	// Button Classes
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-secondary-classes'] = '.btn, .btn-3d, .btn-color-2, .btn-rounded';
@@ -203,7 +196,6 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['menu']['locations']['social'] = 'Footer Top';
 	$boldgrid_framework_configs['menu']['locations']['footer_center'] = "Footer Bottom";
 	
-
 	// Widget Areas.
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-1']['name'] = 'Above Site Title';
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-2']['name'] = 'Below Site Title';
