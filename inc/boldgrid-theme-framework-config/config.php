@@ -11,8 +11,9 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['scripts']['boldgrid-sticky-footer'] = true;
 	$boldgrid_framework_configs['temp']['attribution_links'] = true;
 	
-	// Disable background image.
+	// Disable background image and CTA
 	$boldgrid_framework_configs['customizer-options']['background']['defaults']['background_image'] = false;
+	$boldgrid_framework_configs['template']['call-to-action'] = 'disabled';
 	
 	// Assign menus, widgets, and actions to locations in generic header template.
 	$boldgrid_framework_configs['template']['locations']['header'] = array(
@@ -28,7 +29,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['template']['locations']['footer'] = array(
 		'1' => array( '[menu]social' ),
 		'5' => array( '[menu]footer_center' ),
-		'8' => array( '[widget]boldgrid-widget-3' ),
+		'8' => array( '[widget]boldgrid-widget-3' , '[action]boldgrid_display_contact_block' ),
 		'11' => array( '[action]boldgrid_display_attribution_links' ),
 	);
 	
@@ -165,7 +166,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 
 	// Typography Alternate Headings.
 	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['alternate_headings_font_family'] = 'Heebo';
-	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['alternate_headings_font_size'] = 10;
+	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['alternate_headings_font_size'] = 47;
 	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['alternate_headings_text_transform'] = 'uppercase';
 
 	// Typography Navigation.
@@ -179,7 +180,14 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['body_line_height'] = 175;
 
 	// Typography Tagline Classes.
-	$boldgrid_framework_configs['template']['tagline-classes'] = 'h3 alt-font site-description';
+	$boldgrid_framework_configs['template']['tagline-classes'] = 'h5 site-description';
+
+	// Typography Relationships
+	$boldgrid_framework_configs['customizer-options']['typography']['selectors']['h2.alt-font']= array(
+		'type' => 'subheadings',
+		'round' => 'ceil',
+		'amount' => 2.1,
+	);
 
 	// Button Classes
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
