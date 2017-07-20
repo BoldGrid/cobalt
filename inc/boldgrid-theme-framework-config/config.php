@@ -182,6 +182,13 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	// Typography Tagline Classes.
 	$boldgrid_framework_configs['template']['tagline-classes'] = 'h5 site-description';
 
+	// Typography Relationships
+	$boldgrid_framework_configs['customizer-options']['typography']['selectors']['.woocommerce-page h2.alt-font']= array(
+		'type' => 'subheadings',
+		'round' => 'floor',
+		'amount' => .6,
+	);
+
 	// Button Classes
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-secondary-classes'] = '.btn, .btn-3d, .btn-color-2, .btn-rounded';
