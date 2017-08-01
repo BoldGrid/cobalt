@@ -85,9 +85,14 @@ a,
 .logged-in-as > a,
 .comment-reply-title a,
 .comment-meta a,
+a.url,
+a.comment-edit-link,
 .widget ul#recentcomments > li > a {
 	text-decoration: underline;
 }
+a.url:hover,
+.comment-meta a:hover,
+.edit-link a:hover, 
 .tagcloud a:hover,
 .tagcloud a:focus,
 .entry-meta a:hover,
@@ -356,6 +361,18 @@ aside.sidebar h2.widget-title {
 .sidebar > aside,
 .sidebar .empty-sidebar-message {
 	padding: 20px 12px;
+}
+.sidebar .widget .nav > li > a:focus,
+.sidebar .widget .nav > li > a:hover {
+	background: none transparent;
+	text-decoration: none;
+}
+.sidebar .widget .nav > li > a {
+	padding: 10px 0;
+	text-decoration: underline;
+}
+.sidebar .widget .nav > li {
+	line-height: 1.6;
 }
 .add-widget-message {
 	text-align: center;
