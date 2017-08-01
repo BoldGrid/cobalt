@@ -383,14 +383,14 @@ aside.sidebar h2.widget-title {
 }
 td,
 th {
-	padding: 1.2rem 1.5rem;
+	padding: 18px 24px;
 }
 dd {
-	margin-left: 4.2rem;
-	margin-bottom: 1.2rem;
+	margin-left: 36px;
+	margin-bottom: 16px;
 }
 dt {
-	margin-bottom:.5rem;
+	margin-bottom: 10px;
 }
 
 /* Navigation */
