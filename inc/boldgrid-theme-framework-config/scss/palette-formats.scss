@@ -40,6 +40,10 @@
 	#reviews #comments ol.commentlist li .comment-text {
 		border-color: $palette-primary_1;
 	}
+	.nav-next a,
+	.nav-previous a {
+		color: $text-contrast-palette-primary_1;
+	}
 
 	/*-----------------------------------------------
 	## 2
@@ -51,11 +55,7 @@
 	}
 	.button-secondary,
 	kbd,
-	code,
-	.nav-next,
-	.nav-previous,
-	.nav-next a,
-	.nav-previous a {
+	code {
 		background: $palette-primary_2;
 		color: $text-contrast-palette-primary_2;
 	}

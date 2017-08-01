@@ -230,3 +230,25 @@ function filter_logo_controls( $controls ) {
 	return $controls;
 }
 add_filter( 'kirki/fields', 'filter_logo_controls' );
+
+function boldgrid_post_nav() {
+
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="sr-only"><?php _e( 'Post navigation', 'bgtfw' ); ?></h2>
+		<div class="nav-links">
+			<?php
+				previous_post_link( '<div class="button-primary nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'bgtfw' ) );
+				next_post_link( '<div class="button-primary nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'bgtfw' ) );
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
