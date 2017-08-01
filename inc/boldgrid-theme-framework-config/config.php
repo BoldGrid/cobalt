@@ -188,6 +188,11 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 		'round' => 'floor',
 		'amount' => .6,
 	);
+	$boldgrid_framework_configs['customizer-options']['typography']['selectors']['h2.widget-title.alt-font'] = array(
+		'type' => 'headings',
+		'round' => 'floor',
+		'amount' => 1.8,
+	);
 
 	// Button Classes
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';

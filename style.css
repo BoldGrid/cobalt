@@ -394,12 +394,6 @@ dt {
 }
 
 /* Navigation */
-.nav-previous {
-	float: left;
-}
-.nav-next {
-	float: right;
-}
 .nav-next,
 .nav-previous {
 	margin-bottom: 25px;
