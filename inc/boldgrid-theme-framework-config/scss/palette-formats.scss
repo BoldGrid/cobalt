@@ -123,7 +123,6 @@
 	/*-----------------------------------------------
 	## 5
 	-----------------------------------------------*/
-	pre,
 	.sidebar,
 	.comments,
 	.panel-body,
@@ -147,6 +146,12 @@
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 		background: $palette-primary_5;
 		color: $text-contrast-palette-primary_5;
+	}
+	pre,
+	#respond .alert.alert-info {
+		background: $palette-primary_5;
+		color: $text-contrast-palette-primary_5;
+		border: 1px solid $palette-primary_1;
 	}
 	.site-header {
 		color: $palette-primary_5;
