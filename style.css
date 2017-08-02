@@ -195,8 +195,6 @@ pre {
 .navbar-default .navbar-nav > li:first-child > a {
 	margin-left: 0;
 }
-
-/* Hover & Active */
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > .active > a,
@@ -214,14 +212,14 @@ pre {
 	background: none;
 }
 
-/* xs */
+/* Extra small devices (phones, less than 768px) */
 .navbar-default .navbar-nav,
 .navbar-default .navbar-nav .open .dropdown-menu {
 	text-align: center;
 }
 
-/* sm */
-@media (min-width: 768px) {
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
 	.navbar-default {
 		float: right;
 		margin-top: 10px;
@@ -253,12 +251,15 @@ pre {
 }
 
 /*------------------------------------------------------------------------
-# Modules
+# Pages
 ------------------------------------------------------------------------*/
 
 /*-----------------------------------------------
 ## Global
 -----------------------------------------------*/
+.entry-content {
+	margin-top: 0;
+}
 blockquote {
 	padding: 0 20px;
 }
@@ -267,14 +268,9 @@ blockquote p,
 	padding-left: 15px;
 }
 
-/*------------------------------------------------------------------------
-# Pages
-------------------------------------------------------------------------*/
-.entry-content {
-	margin-top: 0;
-}
-
-/* 404 Page */
+/*-----------------------------------------------
+## 404 Page
+-----------------------------------------------*/
 .error404 .list-group-item {
 	border: none;
 }
@@ -282,7 +278,9 @@ blockquote p,
 	margin: 0;
 }
 
-/* Search Page */
+/*-----------------------------------------------
+## Search Page
+-----------------------------------------------*/
 .search-no-results .jumbotron {
 	padding-left: 0;
 }
@@ -314,7 +312,9 @@ blockquote p,
 	margin-bottom: 60px;
 }
 
-/* Comments */
+/*-----------------------------------------------
+## Comments
+-----------------------------------------------*/
 #cancel-comment-reply-link {
 	float: right;
 	text-decoration: underline;
@@ -344,7 +344,9 @@ blockquote p,
 	border-top: none;
 }
 
-/* Sidebar Widgets */
+/*-----------------------------------------------
+## Sidebar Widgets
+-----------------------------------------------*/
 .widget {
 	padding-bottom: 20px;
 }
@@ -375,7 +377,9 @@ aside.sidebar h2.widget-title {
 	padding-bottom: 15px;
 }
 
-/* Calendar Widget */
+/*-----------------------------------------------
+## Calendar Widget
+-----------------------------------------------*/
 #wp-calendar tr {
 	background: none;
 }
@@ -390,7 +394,9 @@ aside.sidebar h2.widget-title {
 	text-align: left;
 }
 
-/* Tables */
+/*-----------------------------------------------
+## Tables
+-----------------------------------------------*/
 .table > thead > tr > th {
 	border-bottom: none;
 }
@@ -406,7 +412,9 @@ dt {
 	margin-bottom: 10px;
 }
 
-/* Navigation */
+/*-----------------------------------------------
+## Navigation
+-----------------------------------------------*/
 .nav-next,
 .nav-previous {
 	margin-bottom: 25px;
