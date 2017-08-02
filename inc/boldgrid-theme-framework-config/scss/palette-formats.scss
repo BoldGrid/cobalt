@@ -53,7 +53,6 @@
 	.link-secondary:focus {
 		color: $palette-primary_2;
 	}
-	.button-secondary,
 	kbd,
 	code {
 		background: $palette-primary_2;
@@ -93,8 +92,6 @@
 	.footer-center-items > li > a:focus {
 		color: $palette-primary_4;
 	}
-
-	/* Dropdown Child */
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus,
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -167,10 +164,7 @@
 	.widget-title {
 		color: $text-contrast-palette-primary_5;
 	}
-
-	/* sm */
-	@media (min-width: 768px) {
-		/* Dropdown Child Default */
+	@media only screen and (min-width: 768px) {
 		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 			color: $text-contrast-palette-primary_5;
 		}
@@ -199,7 +193,7 @@
 }
 
 /*------------------------------------------------------------------------
-# Body Classes
+# Additional Body Classes
 ------------------------------------------------------------------------*/
 .palette-primary.disabled-footer .site-footer {
 	background: $palette-primary_neutral-color;
