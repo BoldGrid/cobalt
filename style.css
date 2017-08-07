@@ -360,17 +360,9 @@ aside.sidebar h2.widget-title {
 .sidebar .empty-sidebar-message {
 	padding: 20px 12px;
 }
-.sidebar .widget .nav > li > a:focus,
-.sidebar .widget .nav > li > a:hover {
-	background: none transparent;
-	text-decoration: none;
-}
 .sidebar .widget .nav > li > a {
 	padding: 10px 0;
 	text-decoration: underline;
-}
-.sidebar .widget .nav > li {
-	line-height: 1.6;
 }
 .add-widget-message {
 	text-align: center;
