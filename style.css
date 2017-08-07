@@ -377,6 +377,15 @@ aside.sidebar h2.widget-title {
 	padding-bottom: 15px;
 }
 
+@media only screen and (min-width: 768px) {
+	.sidebar-1 .sidebar #searchform .button-primary {
+		width: auto;
+		height: auto;
+		padding: 0 1em;
+		font-size: 14px;
+	}
+}
+
 /*-----------------------------------------------
 ## Calendar Widget
 -----------------------------------------------*/
