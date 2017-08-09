@@ -10,11 +10,11 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	// Enable sticky footer and attribution links.
 	$boldgrid_framework_configs['scripts']['boldgrid-sticky-footer'] = true;
 	$boldgrid_framework_configs['temp']['attribution_links'] = true;
-	
+
 	// Disable background image and CTA
 	$boldgrid_framework_configs['customizer-options']['background']['defaults']['background_image'] = false;
 	$boldgrid_framework_configs['template']['call-to-action'] = 'disabled';
-	
+
 	// Assign menus, widgets, and actions to locations in generic header template.
 	$boldgrid_framework_configs['template']['locations']['header'] = array(
 		'1' => array( '[menu]secondary' ),
@@ -32,7 +32,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 		'8' => array( '[widget]boldgrid-widget-3' , '[action]boldgrid_display_contact_block' ),
 		'11' => array( '[action]boldgrid_display_attribution_links' ),
 	);
-	
+
 	// Specify container classes.
 	$boldgrid_framework_configs['template']['pages']['global']['header'] = 'container-fluid';
 	$boldgrid_framework_configs['template']['pages']['global']['footer'] = 'container-fluid';
@@ -144,7 +144,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 			break;
 		case 'Real Estate':
 			$boldgrid_framework_configs['customizer-options']['colors']['defaults'][5]['default'] = true;
-			break;		
+			break;
 		// Default
 		default:
 			$boldgrid_framework_configs['customizer-options']['colors']['defaults'][0]['default'] = true;
@@ -187,11 +187,6 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 		'round' => 'floor',
 		'amount' => .6,
 	);
-	$boldgrid_framework_configs['customizer-options']['typography']['selectors']['h2.widget-title.alt-font'] = array(
-		'type' => 'headings',
-		'round' => 'floor',
-		'amount' => 1.8,
-	);
 
 	// Button Classes
 	$boldgrid_framework_configs['components']['buttons']['variables']['button-primary-classes'] = '.btn, .btn-3d, .btn-color-1, .btn-rounded';
@@ -215,6 +210,11 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-1']['name'] = 'Above Site Title';
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-2']['name'] = 'Below Site Title';
 	$boldgrid_framework_configs['widget']['sidebars']['boldgrid-widget-3']['name'] = 'Footer';
+
+	foreach( $boldgrid_framework_configs['widget']['sidebars'] as &$sidebar ) {
+		$sidebar['before_title'] = '<h4 class="widget-title">';
+		$sidebar['after_title'] = '</h4>';
+	}
 
 	return $boldgrid_framework_configs;
 }
