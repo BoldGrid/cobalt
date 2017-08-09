@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: boldgrid-cobalt
 Template: prime
-Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready, boldgrid-theme-99 
+Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready, boldgrid-theme-99
 */
 
 /*------------------------------------------------------------------------
@@ -91,7 +91,7 @@ a.comment-edit-link,
 .nav-previous a:hover,
 .nav-previous a:focus,
 a.url:hover,
-.edit-link a:hover, 
+.edit-link a:hover,
 .tagcloud a:hover,
 .tagcloud a:focus,
 .entry-meta a:hover,
@@ -128,7 +128,7 @@ a.url:hover,
 }
 .site-description {
 	padding-bottom: 15px;
-}	
+}
 .site-branding {
 	margin-bottom: -10px;
 }
@@ -384,11 +384,11 @@ aside.sidebar h2.widget-title {
 	background: none;
 }
 #wp-calendar caption {
-	margin-top: 10px; 
+	margin-top: 10px;
 	margin-bottom: 15px;
 }
 #wp-calendar tfoot #next {
-	text-align: right; 
+	text-align: right;
 }
 #wp-calendar tfoot #prev {
 	text-align: left;
@@ -420,7 +420,23 @@ dt {
 	margin-bottom: 25px;
 	padding: 8px 30px;
 }
-.widget .nav > li > a:focus, 
+
+.nav-links .nav-next,
+.nav-links .nav-previous {
+	position: relative;
+}
+
+.nav-links .nav-previous a:after,
+.nav-links .nav-next a:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.widget .nav > li > a:focus,
 .widget .nav > li > a:hover {
 	background: transparent;
 	text-decoration: none;
