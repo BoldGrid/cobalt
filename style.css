@@ -86,10 +86,8 @@ a.comment-edit-link,
 .widget ul#recentcomments > li > a {
 	text-decoration: underline;
 }
-.nav-next a:hover,
-.nav-next a:focus,
-.nav-previous a:hover,
-.nav-previous a:focus,
+a:focus,
+a:hover,
 a.url:hover,
 .edit-link a:hover,
 .tagcloud a:hover,
@@ -415,12 +413,6 @@ dt {
 /*-----------------------------------------------
 ## Navigation
 -----------------------------------------------*/
-.nav-next,
-.nav-previous {
-	margin-bottom: 25px;
-	padding: 8px 30px;
-}
-
 .widget .nav > li > a:focus,
 .widget .nav > li > a:hover {
 	background: transparent;

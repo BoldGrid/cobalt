@@ -31,7 +31,7 @@
 		color: $text-contrast-palette-primary_1;
 	}
 	.post .entry-title a,
-	.pager li > a, {
+	.pager li > a {
 		background: $palette-primary_neutral-color;
 		color: $palette-primary_1;
 	}
@@ -40,8 +40,10 @@
 	#reviews #comments ol.commentlist li .comment-text {
 		border-color: $palette-primary_1;
 	}
-	.nav-next a,
-	.nav-previous a {
+	&.single .nav-next a,
+	&.single .nav-previous a,
+	&.blog .nav-next a,
+	&.blog .nav-previous a {
 		color: $text-contrast-palette-primary_1;
 	}
 
