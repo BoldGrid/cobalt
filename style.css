@@ -421,21 +421,6 @@ dt {
 	padding: 8px 30px;
 }
 
-.nav-links .nav-next,
-.nav-links .nav-previous {
-	position: relative;
-}
-
-.nav-links .nav-previous a:after,
-.nav-links .nav-next a:after {
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
-
 .widget .nav > li > a:focus,
 .widget .nav > li > a:hover {
 	background: transparent;
