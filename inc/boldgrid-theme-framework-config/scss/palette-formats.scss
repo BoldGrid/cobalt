@@ -186,7 +186,8 @@
 		color: $text-contrast-palette-primary_neutral-color;
 	}
 	&.archive .site-content,
-	&.single .site-content {
+	&.single .site-content,
+	&.blog .site-content {
 		background: $palette-primary-neutral-color;
 		color: $text-contrast-palette-primary-neutral-color;
 	}
