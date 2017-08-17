@@ -58,6 +58,10 @@ p {
 /*-----------------------------------------------
 ## Typography
 -----------------------------------------------*/
+h2,
+h3 {
+	word-wrap: break-word;
+}
 a,
 .link-primary:hover,
 .link-primary:focus,
@@ -136,6 +140,9 @@ a.url:hover,
 	margin: 50px 0;
 	text-align: center;
 	font-weight: bold;
+}
+.archive .entry-title {
+	margin: 0;
 }
 
 /*-----------------------------------------------
@@ -271,9 +278,6 @@ blockquote p,
 .error404 .list-group-item {
 	border: none;
 }
-.hentry {
-	margin: 0;
-}
 
 /*-----------------------------------------------
 ## Search Page
@@ -292,21 +296,14 @@ blockquote p,
 /*------------------------------------------------------------------------
 # Posts
 ------------------------------------------------------------------------*/
-.post .entry-title,
-.archive .page-title {
-	margin-bottom: 0;
-}
-.post h1.entry-title {
-	margin-left: -15px;
-}
 .post .entry-header {
 	margin-bottom: 30px;
 }
 .entry-meta {
 	padding-top: 25px;
 }
-.type-post.hentry {
-	margin-bottom: 60px;
+.hentry {
+	margin: 0 auto 60px;
 }
 
 /*-----------------------------------------------
