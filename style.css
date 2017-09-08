@@ -144,6 +144,9 @@ a.url:hover,
 .archive .entry-title {
 	margin: 0;
 }
+.blog .entry-title {
+	margin-bottom: 0;
+}
 
 /*-----------------------------------------------
 ## Buttons
@@ -302,8 +305,8 @@ blockquote p,
 .entry-meta {
 	padding-top: 25px;
 }
-.hentry {
-	margin: 0 auto 60px;
+.post {
+	margin: 0 auto 50px;
 }
 
 /*-----------------------------------------------
